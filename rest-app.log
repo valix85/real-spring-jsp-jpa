@@ -1,0 +1,17 @@
+2018-06-12 14:55:21.542  INFO 27404 --- [restartedMain] i.n.a.realspring.RealspringApplication   : Starting RealspringApplication on DESKTOP-3RKTP68 with PID 27404 (C:\Academy\academy3\pr046-realspring\target\classes started by Valerio in C:\Academy\academy3\pr046-realspring)
+2018-06-12 14:55:21.543 DEBUG 27404 --- [restartedMain] i.n.a.realspring.RealspringApplication   : Running with Spring Boot v1.5.13.RELEASE, Spring v4.3.17.RELEASE
+2018-06-12 14:55:21.544  INFO 27404 --- [restartedMain] i.n.a.realspring.RealspringApplication   : No active profile set, falling back to default profiles: default
+2018-06-12 14:55:26.210  INFO 27404 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-12 14:55:26.217  INFO 27404 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-06-12 14:55:26.502  INFO 27404 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-12 14:55:30.156  INFO 27404 --- [restartedMain] i.n.a.realspring.RealspringApplication   : Started RealspringApplication in 9.07 seconds (JVM running for 9.806)
+2018-06-12 14:56:07.952  INFO 27404 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-12 14:56:08.052 DEBUG 27404 --- [http-nio-8080-exec-1] i.n.a.r.controllers.FilmController       : getFilmByTitolo() called
+2018-06-12 14:56:08.053 DEBUG 27404 --- [http-nio-8080-exec-1] i.n.a.r.controllers.FilmController       : FilmService -> findByTitolo() called with titolo: Saw
+2018-06-12 15:01:12.536  INFO 24288 --- [restartedMain] i.n.a.realspring.RealspringApplication   : Starting RealspringApplication on DESKTOP-3RKTP68 with PID 24288 (C:\Academy\academy3\pr046-realspring\target\classes started by Valerio in C:\Academy\academy3\pr046-realspring)
+2018-06-12 15:01:12.537 DEBUG 24288 --- [restartedMain] i.n.a.realspring.RealspringApplication   : Running with Spring Boot v1.5.13.RELEASE, Spring v4.3.17.RELEASE
+2018-06-12 15:01:12.538  INFO 24288 --- [restartedMain] i.n.a.realspring.RealspringApplication   : No active profile set, falling back to default profiles: default
+2018-06-12 15:01:18.070  INFO 24288 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-12 15:01:18.071  INFO 24288 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-06-12 15:01:18.239  INFO 24288 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-12 15:01:20.816  INFO 24288 --- [restartedMain] i.n.a.realspring.RealspringApplication   : Started RealspringApplication in 8.741 seconds (JVM running for 9.586)
