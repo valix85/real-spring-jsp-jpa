@@ -1,6 +1,5 @@
 package it.nextre.academy.realspring.services;
 
-import it.nextre.academy.realspring.controllers.FilmController;
 import it.nextre.academy.realspring.models.Film;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
@@ -60,7 +59,7 @@ public class FilmService {
 
 
 
-    public Film add(Film f){
+    public Film add(Film f) throws Exception {
         if (f!= null && f.getId()==0 && f.getTitolo()!=null && f.getTitolo().length()>0){
             long id = videoteca.stream()
                     .max((f1, f2) -> (int) (f1.getId()-f2.getId()) )
@@ -72,7 +71,7 @@ public class FilmService {
             videoteca.add(f);
             return f;
         }else{
-            return new Film();
+            throw new Exception("Malformed film data");
         }
     }
 
