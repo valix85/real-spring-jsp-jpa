@@ -72,7 +72,11 @@ public class FilmController {
     public ResponseEntity updateFilm(@RequestBody Film f1, @PathVariable("idFilm") long id){
         log.debug("updateFilm() called with film: " + f1 + " and id: " + id);
         if (f1.getId()==id) {
-            return responseHelper.ok(filmService.save(f1));
+            try {
+                return responseHelper.ok(filmService.save(f1));
+            } catch (Exception e) {
+                return responseHelper.badRequest(e.getMessage());
+            }
         }else{
             return responseHelper.badRequest("Invalid input data, invalid ID");
         }
@@ -83,7 +87,11 @@ public class FilmController {
     public ResponseEntity deleteFilm(@RequestBody Film f1, @PathVariable("idFilm") long id){
         log.debug("deleteFilm() called with film: " + f1 + " and id: " + id);
         if (f1.getId()==id) {
-            return responseHelper.ok(filmService.delete(f1));
+            try {
+                return responseHelper.ok(filmService.delete(f1));
+            } catch (Exception e) {
+                return responseHelper.badRequest(e.getMessage());
+            }
         }else{
             return responseHelper.badRequest("Invalid input data, invalid ID");
         }

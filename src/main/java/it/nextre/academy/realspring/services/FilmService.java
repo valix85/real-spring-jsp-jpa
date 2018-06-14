@@ -77,7 +77,7 @@ public class FilmService {
 
 
 
-    public Film save(Film f){
+    public Film save(Film f) throws Exception{
         if (f!= null && f.getId()>0 && f.getTitolo()!=null && f.getTitolo().length()>0){
             Optional<Film> v = videoteca.stream().filter(f1->f1.getId()==f.getId()).findFirst();
             //ora memorizzo il nuovo film
@@ -88,16 +88,20 @@ public class FilmService {
             log.debug(v.get());
             return v.get();
             }
+        }else{
+            throw new Exception("Malformed film data");
         }
         return new Film();
     }
 
-    public boolean delete(Film f){
+    public boolean delete(Film f) throws Exception{
         if (f!= null && f.getId()>0){
             log.debug("FilmService-> delete() called with film: " + f);
             return videoteca.removeIf(f1->f1.getId()==f.getId());
+        }else{
+            throw new Exception("Malformed film data");
         }
-        return false;
+        //return false;
     }
 
 }//end class
