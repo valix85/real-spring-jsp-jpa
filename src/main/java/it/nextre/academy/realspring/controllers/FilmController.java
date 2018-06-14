@@ -1,22 +1,21 @@
 package it.nextre.academy.realspring.controllers;
 
 
-import it.nextre.academy.realspring.models.Film;
+import it.nextre.academy.realspring.entities.Film;
 import it.nextre.academy.realspring.services.FilmService;
 import it.nextre.academy.realspring.utils.ResponseHelper;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/film")
 public class FilmController {
 
     @Autowired
+    @Qualifier("mockfilm")
     FilmService filmService;
 
     @Autowired
