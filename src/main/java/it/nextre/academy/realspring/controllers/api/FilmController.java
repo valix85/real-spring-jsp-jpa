@@ -1,4 +1,4 @@
-package it.nextre.academy.realspring.controllers;
+package it.nextre.academy.realspring.controllers.api;
 
 
 import it.nextre.academy.realspring.entities.Film;
@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/film")
+@RequestMapping("/api/film")
 public class FilmController {
 
     @Autowired
