@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 public class FilmController {
 
     @Autowired
-    @Qualifier("mockfilm")
+    @Qualifier("implfilm")
     FilmService filmService;
 
     @Autowired

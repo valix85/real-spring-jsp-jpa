@@ -10,6 +10,7 @@ public interface FilmService {
     public Film findById(long id);
     public List<Film> findByTitolo(String titolo);
     public List<Film> findByRegista(String regista);
+    public List<Film> findByAnno(int anno);
     public Film add(Film f) throws Exception;
     public Film save(Film f) throws Exception;
     public boolean delete(Film f) throws Exception;

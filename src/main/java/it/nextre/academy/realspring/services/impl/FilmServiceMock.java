@@ -60,6 +60,13 @@ public class FilmServiceMock implements FilmService {
                 .collect(Collectors.toList());
     }
 
+    public List<Film> findByAnno(int anno) {
+        log.debug("FilmService -> findByAnno() called with regista: " + anno);
+        return videoteca.stream()
+                .filter(f -> f.getAnno()==anno)
+                .collect(Collectors.toList());
+    }
+
 
 
     public Film add(Film f) throws Exception {
